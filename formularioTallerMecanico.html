@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <title>Taller Mec&aacute;nico July</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Taller, mecánica, solicitud, salida, alta, vehiculo cliente, datos" />
+        <meta name="description" content="Taller mecánico July, las mejores repaciones para su vhiculo nuevo o usado, con garantía." />
+        <link rel="stylesheet" href="CSS/estilos.css">
+        <script src="JS/validacion.js"></script>
+
+    </head>
+
+<body>
+    <div id="contenedor">
+        <!-- Cabecera de la página-->
+        <header class="cabecera">
+
+            <div class="logo">
+                <img title="Taller Mecánico July" alt="icono de taller" src="imagenes/logoTaller.jpg" width="163" height="128">
+
+            </div>
+            
+            <h1> Taller mec&aacute;nico July el mejor del mundo, garantizado !...</h1>
+
+            <div class="logoDerecho">
+                <img title="Taller Mecánico July" alt="icono de taller" src="imagenes/logo2Taller.jpg" width="150" height="128">
+            </div>
+
+        </header>
+        
+        <nav>
+           <div class="imagen">
+                <img title="Taller Mecánico July" alt="icono de taller" src="imagenes/mecanica.jpg" width="1890" height="360">
+            </div>
+            
+        </nav>
+
+        <!-- Contenido principal -->
+        <section class="contenidoPrincipal">
+           <form id="formu" action="">
+                <h1>SOLICITUD DE DATOS DE ALTA DEL VEHICULO</h1>
+                <br/>
+                <h3>Datos Cliente:</h3>
+                <br/>
+                <div>
+                    <label for="dni">DNI/CIF de la empresa:</label>
+                    <br/>
+                    <br/>
+                    <input type="text" id="dni" name="dni" maxlenght="11" placeholder="14598635F o 14598635f" required>
+                    <p id="error1"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="nombre">Nombre cliente:</label>
+                    <br/>
+                    <br/>
+                    <input type="text" id="nombre" name="nombre" maxlenght="40" placeholder="Julio César Ortiz" required>
+                    <p id="error2"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="empresa">Empresa cliente:</label>
+                    <br/>
+                    <br/>
+                    <input type="text" id="empresa" name="empresa" maxlenght="40"placeholder="CNT E.P." required>
+                    <p id="error3"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="direccion">Direcci&oacute;n:</label>
+                    <br/>
+                    <br/>
+                    <input type="text" id="direccion" name="direccion" maxlenght="70" placeholder="Intersección Daule pasaje A casa 234 y Pisque" required>
+                    <p id="error4"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="email">Email:</label>
+                    <br/>
+                    <br/>
+                    <input type="email" id="email" name="email" maxlenght="40" placeholder="jortiz115@hotmail.com" required>
+                    <p id="error5"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="telefono">Tel&eacute;fono:</label>
+                    <br/>
+                    <br/>
+                    <input type="tel" id="telefono" name="telefono" maxlenght="14" placeholder="0996097348 o 023128377" required>
+                    <p id="error6"></p>
+                </div>
+                <br/>
+                <h3>Datos veh&iacute;culo:</h3>
+                <br/>
+                <div>
+                    <label for="fecha">Fecha de entrada:</label>
+                    <br/> 
+                    <br/>
+                    <input type="date" id="fecha" name="fecha" placeholder="dd/mm/yyyy" required>
+                    <p id="error7"></p>
+                </div>
+                <br>
+                <div>
+                    <label for="marca">Marca:</label>
+                    <br/>
+                    <br/>
+                    <input type="text" id="marca" name="marca" maxlenght="25" placeholder="HYUNDAI" required>
+                    <p id="error8"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="modelo">Modelo:</label>
+                    <br/>
+                    <br/>
+                    <input type="text" id="modelo" name="modelo" maxlenght="8" placeholder="5829FGY" required>
+                    <p id="error9"></p>
+                </div>
+                <br/>
+                <div class="selectdiv">
+                    <label for="motorizacion">Motorizaci&oacute;n</label>
+                    <br />
+                    <br />
+                    <select name="motorizacion" id="motorizacion" required>
+                        <option value="">-Elija opti&oacute;n-</option>
+                        <option value="gasolina">Gasolina</option>
+                        <option value="diesel">Di&eacute;sel</option>
+                        <option value="hibrido">H&iacute;brido</option>
+                        <option value="electrico">El&eacute;ctrico</option>
+                        <option value="gpl">GPL</option>
+                    </select>
+                    <p id="error10"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="potencia">Potencia CV:</label>
+                    <br />
+                    <br />
+                    <input type="number" id="potencia" name="potencia" min="50" max="300" placeholder="50" required>
+                    <p id="error11"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="puertas">No. de puertas:</label>
+                    <br />
+                    <br />
+                    <input type="number" id="puertas" name="puertas" min="3" max="5" placeholder="5" required>
+                    <p id="error12"></p>
+                </div>
+                <br/>
+                <div>
+                    <label for="carroceria">Tipo de carrocer&iacute;a:</label>
+                    <br/>
+                    <br/>
+                    <input type="text" id="carroceria" name="carroceria" maxlenght="30" placeholder="MET" required>
+                    <p id="error13"></p>
+                </div>
+                <br/>
+                <div>
+                    <label>Descripci&oacute;n de aver&iacute;a: </label>
+                    <br/>
+                    <br/>
+                    <textarea name="averia" id="averia" placeholder="Ingrese la descripción de su avería" rows="20" cols="150"></textarea>
+                    <p id="error14"></p>
+                </div>
+                                        
+                <br/>
+                <div>
+                    <button type="button" id="procesar">Enviar datos</button>
+                    <button type="reset" id="limpiar">Limpiar formulario</button>
+                </div>
+
+            </form>
+            
+        </section>
+
+        <!-- Pie de la página -->
+        <footer class="piePagina">
+            <p>Ing. Julio César Ortiz, Copyright &copy; 2020</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

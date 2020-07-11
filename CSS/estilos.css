@@ -1,0 +1,282 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvatica, sans-serif;
+}
+
+#contenedor{
+    border: 1px solid rgba(210, 229, 245, 0.98);
+    margin-left: auto;
+    margin-right: auto; 
+    width: 1890px;
+    background-color: rgba(210, 229, 245, 0.98); 
+    padding: 5px;  /*margenes de los elementos que estan en el contenedor*/
+}
+
+/* Cabecera */
+.cabecera{    
+    width: 100%;    
+    height: 138px;
+    background-color: #000;
+    border-bottom: 5px solid #1293d4;
+    overflow: hidden;
+}
+
+header .logo{
+    float: left;
+    margin: 06px;
+    width: 160px;
+}
+
+header h1{
+    color: #fff; 
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+header .logoDerecho{
+    float: right;
+    margin-top: -82px;
+    margin-right: 06px;
+}
+
+header .logo img{
+    width: 100%;
+}
+
+header .logoDerecho img{
+    width: 100%;
+}
+
+.logo img:hover{
+    filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	-khtml-opacity: 0.5;
+
+}
+
+.logoDerecho img:hover{
+    filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	-khtml-opacity: 0.5;
+
+}
+
+/* Navegación */
+nav .imagen{
+    margin-bottom: 15px;
+}
+
+
+/* Sección */
+.contenidoPrincipal{
+    border: 1px #fff4e1;
+    width: 60%;  /* Para que mantenga la posición al realizar zoom + o - */
+    height: 1850px; /* para el alto del formulario*/  
+    margin-left: auto;  /*  centro horizontalmente */
+    margin-right: auto; /*  centro horizontalmente */
+    margin-bottom: 15px;
+    color: #34635b;
+    background-color: #fff4e1;
+    /*position: relative;*/
+    
+    /*   *******************************************************************************  */
+    
+    /* versión utilizando flexbox pero en internet explorer 11 varia un poco  */
+    display: flex; /* nuevo centrado */ 
+    flex-direction:row;  /* nuevo centrado */
+    flex-wrap: wrap;   /* nuevo centrado  */
+    
+    justify-content: center; /* nuevo centrado  */
+    align-items: center; /* nuevo centrado  */
+    
+    /*   *******************************************************************************  */
+}
+
+#formu{
+    /*position: absolute;
+    top: 1.5%;
+    left: 22.2%;*/
+    /*margin: auto;*/
+    background-color: blanchedalmond;
+    /*margin-left: auto;*/  /*  centro horizontalmente */
+    /*margin-right: auto;*/ /*  centro horizontalmente */
+    width: 50%;  /* Para que mantenga la posición al realizar zoom + o - */
+    padding: 2em;
+    border: 1px solid #0c99e4;
+    border-radius: 1em;
+}
+
+#formu h1, h3{
+    text-align: center;
+    color: chocolate; 
+}
+#formu label{
+    font-weight: bold; 
+}
+
+#formu label{
+    font-weight: bold;
+}
+
+#formu #sangria{
+    margin-left: 2%;
+}
+
+
+
+#dni, #nombre, #empresa, #direccion, #email, #telefono, #fecha, #marca, #modelo, #potencia, #puertas, #carroceria, #averia{
+    border-radius: .4em;
+    border: 1px solid #aaa;
+    width: 80%;  /* Para que mantenga la posición al realizar zoom + o - */ 
+    height: 40px;
+    padding: .4em 1.4em .3em .8em;
+}
+
+#dni:hover, #nombre:hover, #empresa:hover, #direccion:hover, #email:hover, #telefono:hover, #fecha:hover, #marca:hover, #modelo:hover, #motorizacion:hover, #potencia:hover, #puertas:hover, #carroceria:hover, #averia:hover{
+    border-color: #0c99e4;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 1px 3px 3px 2px #0c99e4;
+}
+
+.selectdiv {
+  position: relative;
+}
+.selectdiv:after {
+    content: "";
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #aaa;
+    right: 110px;
+    top: 42px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;  
+    border-left: 1px solid #aaa;
+    position: absolute;
+    pointer-events: none; 
+}
+#envio::-ms-expand {
+display: none;
+}
+.selectdiv select {
+  display: block;
+  width: 480px;
+  height: 50px;
+  margin: 5px 0px;
+  padding: .4em 1.4em .3em .8em;
+  line-height: 1.3;
+  color: #444;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #aaa;
+  border-radius: .4em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("imagenes/lista2.jpg");
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+  
+}
+
+#averia {
+    border-radius: .4em;
+    border: 1px solid #aaa;
+    width: 80%; /* Para que mantenga la posición al realizar zoom + o - */
+    height: 70px;
+    padding: .4em 1.4em .3em .8em;
+    
+}
+
+#procesar, #limpiar{
+  border-radius: .4em;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#procesar {
+    background-color: #4CAF50;    
+}
+#limpiar {
+    background-color: #27c7d3;
+}
+
+#procesar:hover, #limpiar:hover{
+    background-color: #c0c0c0;
+}
+
+/* Dispositivo Tablet */
+@media screen and (max-width: 700px) {
+     section {
+         width: auto;
+         float: none;
+    }
+     aside {
+         width: auto;
+         float: none;
+    }
+}
+
+.piePagina{
+    
+    clear: both;
+    width: 100%;
+    height: 60px;
+    background-color: #1293d4;
+}
+
+footer p{
+    color: #fff;
+    padding-top: 20px; 
+    text-align: center;
+    
+}
+
+ /*Dispositivo móvil*/
+ @media screen and (max-width: 480px) {
+     #contenedor{
+         width: 100%;
+         border:none;
+         margin: 0px;
+         padding: 0px;
+    }
+     header {
+         margin: 0;
+    }
+     header .logo{
+         margin: auto;
+         float: none;
+         width: 100px;
+    }
+     nav{
+         display: none;
+    }
+     header h3 {
+         display: none;
+    }
+     aside {
+         display: none;
+    }
+     section{
+         width: 100%;
+         margin: 0;
+         padding: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+

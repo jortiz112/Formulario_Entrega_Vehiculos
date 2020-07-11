@@ -1,0 +1,89 @@
+#formu {
+    background-color: blanchedalmond;
+    margin: 20px auto;
+    width: 600px;
+    padding: 3em;
+    border: 1px solid #0c99e4;
+    border-radius: 1em;
+}
+#formu h1 {
+    text-align: center;
+}
+#formu label {
+    font-weight: bold;
+}
+#nombre, #email, #limite, #presupuesto, #buscaEmail {
+    border-radius: .4em;
+    border: 1px solid #aaa;
+    width: 450px;
+    height: 40px;
+    padding: .4em 1.4em .3em .8em;
+}
+#nombre:hover, #email:hover, #limite:hover, #envio:hover, #presupuesto:hover, #buscaEmail:hover {
+    border-color: #0c99e4;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 1px 3px 3px 2px #0c99e4;
+}
+.selectdiv {
+  position: relative;
+}
+.selectdiv:after {
+    content: "";
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #aaa;
+    right: 140px;
+    top: 42px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;  
+    border-left: 1px solid #aaa;
+    position: absolute;
+    pointer-events: none; 
+}
+#envio::-ms-expand {
+display: none;
+}
+.selectdiv select {
+  display: block;
+  width: 480px;
+  height: 50px;
+  margin: 5px 0px;
+  padding: .4em 1.4em .3em .8em;
+  line-height: 1.3;
+  color: #444;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #aaa;
+  border-radius: .4em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("lista2.jpg");
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+  
+}
+#procesar, #buscar, #mostrar {
+  border-radius: .4em;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#procesar {
+    background-color: #4CAF50;    
+}
+#buscar {
+    background-color: #27c7d3;
+}
+#mostrar {
+    background-color: #ffa346;
+}
+#procesar:hover, #buscar:hover, #mostrar:hover {
+    background-color: #c0c0c0;
+}
