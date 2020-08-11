@@ -1,4 +1,4 @@
-# Remoto-repo-jortiz112
+# Taller Mecánico
 Desarrollo de un formulario completo, sin envío de datos al servidor, que sirva para dar de alta vehículos en un taller mecánico.
 Se tiene en cuenta una serie de validaciones en el formulario cuando el usuario intenta enviar los datos. Dichas validaciones consisten en:
 
