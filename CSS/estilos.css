@@ -1,51 +1,119 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvatica, sans-serif;
+
+/* Para importar un tipo de letra de google fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/* Para declarar variables que utilizare más abajo en algunos elementos */
+:root {
+  --color-white: #ebebeb; /* declaración de variable para ser utilizada en cualquier elemento */
+  --color-darkblue: hsl(240, 30%, 15%);
+  --color-darkblue-alpha: rgba(47, 47, 80, 0.8);
+  --color-green: #37af65;
 }
 
-#contenedor{
-    border: 1px solid rgba(210, 229, 245, 0.98);
-    margin-left: auto;
-    margin-right: auto; 
-    width: 1890px;
-    background-color: rgba(210, 229, 245, 0.98); 
-    padding: 5px;  /*margenes de los elementos que estan en el contenedor*/
+*, *::before, *::after {
+    box-sizing: border-box; /*El ancho y el alto se aplican a todas las partes del elemento: contenido, relleno y bordes  */
+}
+
+/*Tipo de letra, tamaño, ancho, altura entre líneas, color del texto y margen  */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-white); /*variable de color inicializada en el :root*/
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4; 
+    margin: 0;
+}
+
+/* Para la imagen como brackground */
+body::before {
+    content: ''; /* no inserta nada de texto antes del body */
+    position: fixed;  /* esta posicionamiento fijo a la ventana del navegador */
+    top: 0; /* necesario con position fixed */
+    left: 0;  /* necesario con position fixed */
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* superposición de elementos -1 para que permanesca el fondo sin superposicionarse al formulario */
+    background-image: linear-gradient( 300deg, rgba(47, 47, 163, 0.8), rgba(151, 151, 226, 0.7) ), url("imagenes/cascada.jpg");
+    background-size: cover;  /* para que cubra todo el contenedor la imagens  */
+    background-repeat: no-repeat; /* para que la imagen se muestre una sola vez sin repetirse */
+    background-position: center;
+}
+
+.contenedor{
+    border: 1px solid rgba(210, 229, 245, 0.98); 
+    padding: 5px; /*margenes de los 4 lados desde donde los elementos estarán en el contenedor*/
+    width: 100%;  /* Para que sea responsive */
+    min-width: 274px;  /* para que no se vea el body blanco cuando se reduce demaciado */
+    margin: auto;  /* para centrar horizontalmente el formulario y el header */
+
+    /* *******************GRID CSS******************* */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "footer";
+    /* ********************************************** */
 }
 
 /* Cabecera */
-.cabecera{    
+.cabecera { 
     width: 100%;    
-    height: 138px;
+    height: auto;   
     background-color: #000;
+    border-top: 5px solid #1293d4;
     border-bottom: 5px solid #1293d4;
-    overflow: hidden;
+    
+
+    /* ***************GRID CSS************* */
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    /* ************************************ */
 }
 
 header .logo{
-    float: left;
-    margin: 06px;
-    width: 160px;
+    justify-self: start;  /* fijo al lado izquierdo o inicio  GRID CSS */
+    align-self: center; /* GRID CSS centrado vertical de elementos  */
+    margin-top: 6px;
+    margin-left: 6px;
 }
 
 header h1{
-    color: #fff; 
-    margin-top: 50px;
-    margin-left: 200px;
+    justify-self: center; /* centrado horizontalmente con GRID CSS */
+    align-self: center;  /* GRID CSS centrado vertical de elementos  */
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* **********TEXTO RESPONSIVE************ */
+    font-size: 2.1vw;  /* texto responsive a la pantalla con unidades vh y vw*/
+    /* ************************************** */
+    
 }
 
 header .logoDerecho{
-    float: right;
-    margin-top: -82px;
-    margin-right: 06px;
+    justify-self: end;  /* fijo al lado derecho o final GRID CSS  */
+    align-self: center;  /* GRID CSS centrado vertical de elementos  */
+    margin-top: 6px;
+    margin-right: 6px;
 }
 
 header .logo img{
-    width: 100%;
+
+    /* *****Imagen responsive******** */
+    max-width: 100%;
+    height: auto;
+    /* ****************************** */    
 }
 
 header .logoDerecho img{
-    width: 100%;
+
+    /* *****Imagen responsive******** */
+    max-width: 100%;
+    height: auto;
+    /* ****************************** */
 }
 
 .logo img:hover{
@@ -65,217 +133,232 @@ header .logoDerecho img{
 }
 
 /* Navegación */
-nav .imagen{
-    margin-bottom: 15px;
+nav img {
+    /* *****Imagen responsive******** */
+    max-width: 100%;
+    height: 20vw; /* unidades responsive */
+    /* ****************************** */
 }
-
 
 /* Sección */
 .contenidoPrincipal{
-    border: 1px #fff4e1;
-    width: 60%;  /* Para que mantenga la posición al realizar zoom + o - */
-    height: 1850px; /* para el alto del formulario*/  
-    margin-left: auto;  /*  centro horizontalmente */
-    margin-right: auto; /*  centro horizontalmente */
-    margin-bottom: 15px;
-    color: #34635b;
-    background-color: #fff4e1;
-    /*position: relative;*/
-    
-    /*   *******************************************************************************  */
-    
-    /* versión utilizando flexbox pero en internet explorer 11 varia un poco  */
-    display: flex; /* nuevo centrado */ 
-    flex-direction:row;  /* nuevo centrado */
-    flex-wrap: wrap;   /* nuevo centrado  */
-    
-    justify-content: center; /* nuevo centrado  */
-    align-items: center; /* nuevo centrado  */
-    
-    /*   *******************************************************************************  */
+    width: 100%;  /* Para que sea responsive */
+    margin: 3rem auto 0 auto;  /* para centrar horizontalmente el formulario y el header */    
 }
 
-#formu{
-    /*position: absolute;
-    top: 1.5%;
-    left: 22.2%;*/
-    /*margin: auto;*/
-    background-color: blanchedalmond;
-    /*margin-left: auto;*/  /*  centro horizontalmente */
-    /*margin-right: auto;*/ /*  centro horizontalmente */
-    width: 50%;  /* Para que mantenga la posición al realizar zoom + o - */
-    padding: 2em;
-    border: 1px solid #0c99e4;
-    border-radius: 1em;
-}
-
-#formu h1, h3{
+.h1 {
+    padding: 0 0.625rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1.875rem;
     text-align: center;
-    color: chocolate; 
-}
-#formu label{
-    font-weight: bold; 
 }
 
-#formu label{
-    font-weight: bold;
+/* Diseño del contenedor de los elementos del formulario */
+form{
+    background: var(--color-darkblue-alpha); /* variable de color inicializada en el :root*/
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.5rem;
+    min-width: 262px; /* para que se mantenga el formulario cuando se disminuye la página responsive demasiado. */
 }
 
-#formu #sangria{
-    margin-left: 2%;
+form .h3 {
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-
-
-#dni, #nombre, #empresa, #direccion, #email, #telefono, #fecha, #marca, #modelo, #potencia, #puertas, #carroceria, #averia{
-    border-radius: .4em;
-    border: 1px solid #aaa;
-    width: 80%;  /* Para que mantenga la posición al realizar zoom + o - */ 
-    height: 40px;
-    padding: .4em 1.4em .3em .8em;
+/* Diseño de las etiquetas  */
+label {
+    display: flex; /*contenedor flexible  */
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
 }
 
-#dni:hover, #nombre:hover, #empresa:hover, #direccion:hover, #email:hover, #telefono:hover, #fecha:hover, #marca:hover, #modelo:hover, #motorizacion:hover, #potencia:hover, #puertas:hover, #carroceria:hover, #averia:hover{
+/* Agrupo con esta clase todos los elementos del formulario correspondientes a los div */
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+}
+
+input, button, select, textarea {
+    margin: 0;
+    font-family: inherit; /* heredada propiedad del elemento principal*/
+    font-size: inherit; /* heredada propiedad del elemento principal*/
+    line-height: inherit; /* heredada propiedad del elemento principal*/
+}
+
+#dni:hover, #nombre:hover, #empresa:hover, #direccion:hover, #email:hover, #telefono:hover, #fecha:hover, #marca:hover, #modelo:hover, #motorizacion:hover, #potencia:hover, #puertas:hover, #carroceria:hover, #averia:hover {
     border-color: #0c99e4;
     box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
     box-shadow: 1px 3px 3px 2px #0c99e4;
 }
 
-.selectdiv {
-  position: relative;
+/* agrupamiento de la clase de los input */
+.form-control {
+    display: block; /* Muestra un elemento como un elemento de bloque (como <p>). Comienza en una nueva línea y ocupa todo el ancho */
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced0da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+/* Para la rayita del la lista de valores */
+.selectdiv {
+    position: relative;
+  }
+
+/* Para la rayita del la lista de valores */
 .selectdiv:after {
     content: "";
-    font: normal normal normal 17px/1 FontAwesome;
     color: #aaa;
-    right: 110px;
-    top: 42px;
-    height: 34px;
-    padding: 15px 0px 0px 8px;  
-    border-left: 1px solid #aaa;
+    right: 35px;
+    top: 38px;
+    height: 36px;
+    border-left: 2px solid #aaa;
     position: absolute;
     pointer-events: none; 
 }
-#envio::-ms-expand {
-display: none;
-}
+
+/* Imagen de la lista de valores, la de la esquina derecha, el triangulito */
 .selectdiv select {
-  display: block;
-  width: 480px;
-  height: 50px;
-  margin: 5px 0px;
-  padding: .4em 1.4em .3em .8em;
-  line-height: 1.3;
-  color: #444;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #aaa;
-  border-radius: .4em;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff;
-  background-image: url("imagenes/lista2.jpg");
-  background-repeat: no-repeat, repeat;
-  background-position: right .7em top 50%, 0 0;
-  background-size: .65em auto, 100%;
-  
-}
-
-#averia {
-    border-radius: .4em;
-    border: 1px solid #aaa;
-    width: 80%; /* Para que mantenga la posición al realizar zoom + o - */
-    height: 70px;
-    padding: .4em 1.4em .3em .8em;
+    background-image: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("imagenes/lista2.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: right .6em top 50%, 0 0;
+    background-size: .65em auto, 100%;
     
+  } 
+  
+
+.input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;  /* puede ir cambiando la altura del elemento el usuario */
 }
 
+/* Cuando se da clic en las cajas de texto el border cambia de color para indicar que se esta posicionado ahí. */
+.form-control:focus, .input-textarea:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Botones */
 #procesar, #limpiar{
-  border-radius: .4em;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-size: 18px;
-}
-#procesar {
-    background-color: #4CAF50;    
-}
-#limpiar {
-    background-color: #27c7d3;
-}
-
-#procesar:hover, #limpiar:hover{
-    background-color: #c0c0c0;
-}
-
-/* Dispositivo Tablet */
-@media screen and (max-width: 700px) {
-     section {
-         width: auto;
-         float: none;
-    }
-     aside {
-         width: auto;
-         float: none;
-    }
-}
+    width: 100%;
+    border-radius: 2PX;
+    color: inherit;
+    padding: 15px 32px;
+    display: block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  #procesar {
+      background-color: #4CAF50;    
+  }
+  #limpiar {
+      background-color: #27c7d3;
+  }
+  
+  #procesar:hover, #limpiar:hover{
+      background-color: #b38838;
+  }
 
 .piePagina{
-    
-    clear: both;
+    /* clear: both; */ /* Indica que el elemento es movido hacia abajo para limpiar tanto elementos flotantes de la izquierda como de la derecha. */
     width: 100%;
     height: 60px;
     background-color: #1293d4;
+    margin-top: 15px;
+    /* ***************GRID CSS************* */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    /* ************************************ */
 }
 
-footer p{
+footer p {
     color: #fff;
-    padding-top: 20px; 
-    text-align: center;
+    text-align: center; /* centrado horizontalmente con GRID CSS */
+    align-self: center;
+    font-size: 1vw; /* texto responsive a la pantalla con unidades vh y vw*/
     
 }
 
- /*Dispositivos móvil*/
- @media screen and (max-width: 480px) {
-     #contenedor{
-         width: 100%;
-         border:none;
-         margin: 0px;
-         padding: 0px;
+/* Media querys para dispositivos diferentes al PC */
+@media (max-width: 720px) {   
+    header h1 {
+        font-size: 1.3rem;
     }
-     header {
-         margin: 0;
+
+    footer p {
+        font-size: 2.5vw; /* texto responsive a la pantalla con unidades vh y vw*/
     }
-     header .logo{
-         margin: auto;
-         float: none;
-         width: 100px;
-    }
-     nav{
-         display: none;
-    }
-     header h3 {
-         display: none;
-    }
-     aside {
-         display: none;
-    }
-     section{
-         width: 100%;
-         margin: 0;
-         padding: 5px;
-    }
+
 }
 
+@media (max-width: 669px) {  
+    header h1 {
+        font-size: 1rem;
+    }
 
+    footer p {
+        font-size: 2.5vw; /* texto responsive a la pantalla con unidades vh y vw*/
+    }
 
+}
 
+@media (max-width: 536px) {  
+    header h1 {
+        font-size: 0.8rem;
+    }
 
+    footer p {
+        font-size: 2.5vw; /* texto responsive a la pantalla con unidades vh y vw*/
+    }
+
+}
+
+@media (max-width: 448px) {   
+    header h1 {
+        font-size: 0.5rem;
+    }
+
+    footer p {
+        font-size: 2.5vw; /* texto responsive a la pantalla con unidades vh y vw*/
+    }
+
+}
+
+/* Estos media querys ajustan todo el contenedor principal y permite que se vea como centrado el formulario y todo el texto  */
+ @media (min-width: 768px) {
+    .contenidoPrincipal {
+        max-width: 720px;
+    }
+ }
+
+@media (min-width: 576px) {
+    .contenidoPrincipal {
+        max-width: 740px; /* Este da el ancho del formulario en el monitor */
+     }
+}
+
+@media (min-width: 480px) {
+    form {
+      padding: 2.5rem;
+    }
+}  
 
 
 
