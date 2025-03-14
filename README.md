@@ -2,11 +2,9 @@
 # <h1 align="center"> 💥Taller mecánico💥 </h1>
 ***
 
-![img](/assets/Portafolio.png)
-
-![img](/assets/Sobremi.png)
-
-![img](/assets/Sobremi.png)
+![img](/imagenes/taller1.png)
+![img](/imagenes/taller2.png)
+![img](/imagenes/taller3.png)
 
 ## 📄Descripción del proyecto
 
@@ -29,6 +27,8 @@ Los campos de "Potencia CV" y "No. de puertas" deben ser numéricos.
 
 ✔️CSS
 
+✔️JavaScript
+
 ## 💻Instalación
 
 ```sh
@@ -39,10 +39,10 @@ Para probar la funcionalidad del "Portafolio", simplemente visita el siguiente e
 
 ## 👩👨Autores del Proyecto
 
->> ![img](/assets/Foto-Pequeña-julio.png)    Programación HTML y CSS
+>> ![img](/imagenes/Foto-Pequeña-julio.png)    Programación HTML, CSS y JavaScript
 >                               
->>> ![img](/assets/Alura%20Latam2.png)  Curso de HTML5, CSS3, flexbox, responsividad, entre otros.
+>>> ![img](/imagenes/Miriadax.jpg)  Curso de Diseño Web con HTML5 + CSS (8.ª Edición).
 
 ## 📜Certificados
 
->> ![img](/assets/certificado1.png)
+>> ![img](/imagenes/Certificado.png)
