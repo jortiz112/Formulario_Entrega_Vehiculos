@@ -6,6 +6,8 @@
 
 ![img](/assets/Sobremi.png)
 
+![img](/assets/Sobremi.png)
+
 ## 📄Descripción del proyecto
 
 ```sh
