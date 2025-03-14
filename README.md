@@ -18,6 +18,7 @@ El DNI / CIF tiene que ser válido.
 El correo electrónico debe incluir un @ y al menos un punto (.).
 El modelo debe constar de 4 números y 3 letras.
 Los campos de "Potencia CV" y "No. de puertas" deben ser numéricos.
+DNI de ejemplo que se puede utilizar: 45612378C
 
 ```
 
